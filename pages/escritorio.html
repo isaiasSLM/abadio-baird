@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Escritório - Abadio Baird</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../script.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.png" alt="Logo do Escritório" />
+            </a>
+            <button class="menu-toggle">☰</button>
+            <ul class="nav-links">
+                <li><a href="escritorio.html">O Escritório</a></li>
+                <li><a href="advogados.html">Advogados</a></li>
+                <li><a href="historia.html">Nossa História</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página "O Escritório" -->
+    <section class="section about">
+        <h2>Sobre o Escritório</h2>
+        <div class="about-content">
+            <div class="gallery">
+                <img src="../img/e2.png" alt="Escritório" class="office-image active">
+                <img src="../img/e1.png" alt="Escritório" class="office-image">
+                <img src="../img/e3.png" alt="Escritório" class="office-image">
+            </div>
+            <div class="gallery-buttons">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+            <div class="about-text">
+                <p>O Abadio Baird Advocacia se compromete a proporcionar um ambiente de trabalho acolhedor e
+                    confortável, onde nossos clientes podem se sentir à vontade para discutir suas necessidades
+                    jurídicas. Acreditamos que a empatia e a confiança são fundamentais em cada interação.</p>
+                <p>Nossa missão é oferecer serviços jurídicos de alta qualidade, pautados pela ética e transparência,
+                    buscando sempre a melhor solução para nossos clientes.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/558488770810" class="whatsapp-button">
+        <img src="../img/what.png" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <p>© 2024 Abadio Baird - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

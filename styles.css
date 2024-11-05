@@ -1,0 +1,789 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Alinha os itens no topo */
+    height: 600px;
+    padding: 1rem;
+    background-color: #000;
+    background-image: url('img/pexels-sevenstormphotography-443395.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    margin-right: auto;
+    /* Empurra a logo para a esquerda */
+}
+
+.logo img {
+    height: 300px;
+    /* Ajusta a altura da logo conforme necessário */
+    width: auto;
+    /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease;
+    /* Transição suave para o efeito de transformação */
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    /* Aumenta a logo ao passar o mouse */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    /* Adiciona margem esquerda automática para empurrar os links para a direita */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+    position: relative;
+    /* Necessário para o efeito de sombra */
+    transition: color 0.3s ease;
+    /* Transição suave para a cor */
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.nav-links a:hover {
+    color: #6c6a6a;
+    /* Cor do texto ao passar o mouse */
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    /* Efeito de sombra no texto */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Oculta os links em telas menores */
+        flex-direction: column;
+        /* Alinha os links em coluna */
+        width: 250px;
+        /* Largura do menu lateral */
+        position: absolute;
+        /* Para sobrepor o conteúdo */
+        top: 60px;
+        /* Alinha abaixo do cabeçalho */
+        right: -250px;
+        /* Inicia fora da tela, do lado direito */
+        background-color: #000000a7;
+        /* Cor de fundo azul */
+        z-index: 1000;
+        /* Para garantir que fique acima de outros elementos */
+        padding: 0;
+        /* Remove padding interno para melhor organização */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        /* Sombra para profundidade */
+        transition: right 0.3s ease;
+        /* Suaviza a transição da posição */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Exibe os links quando o menu é ativado */
+        right: 0;
+        /* Move o menu para dentro da tela */
+    }
+
+    .nav-links a {
+        color: #fff;
+        /* Cor dos links */
+        text-decoration: none;
+        /* Remove sublinhado */
+        padding: 1rem;
+        /* Adiciona padding ao link */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        /* Linha inferior suave */
+        transition: background-color 0.3s ease;
+        /* Transição para fundo */
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        /* Fundo suave ao passar o mouse */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão do menu em telas menores */
+        background: none;
+        /* Sem fundo */
+        color: #fff;
+        /* Cor do texto */
+        font-size: 2rem;
+        /* Tamanho da fonte maior */
+        cursor: pointer;
+        /* Cursor pointer */
+    }
+}
+
+
+
+.nav-links.active {
+    display: flex;
+    /* Exibe os links quando o menu é ativado */
+    opacity: 1;
+    /* Torna o menu visível */
+    visibility: visible;
+    /* Torna o menu visível */
+}
+
+.nav-links a {
+    color: #fff;
+    /* Cor dos links */
+    text-decoration: none;
+    /* Remove sublinhado */
+    padding: 1rem;
+    /* Adiciona padding ao link */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Linha inferior suave */
+    transition: background-color 0.3s ease;
+    /* Transição para fundo */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fundo suave ao passar o mouse */
+}
+
+.menu-toggle {
+    display: block;
+    /* Mostra o botão do menu em telas menores */
+    background: none;
+    /* Sem fundo */
+    color: #fff;
+    /* Cor do texto */
+    font-size: 2rem;
+    /* Tamanho da fonte maior */
+    cursor: pointer;
+    /* Cursor pointer */
+}
+
+
+
+.nav-links.active {
+    display: flex;
+    /* Exibe os links quando o menu é ativado */
+    max-height: 300px;
+    /* Altura máxima ao abrir o menu */
+}
+
+.nav-links a {
+    color: #fff;
+    /* Cor dos links */
+    text-decoration: none;
+    /* Remove sublinhado */
+    padding: 1rem;
+    /* Adiciona padding ao link */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Linha inferior suave */
+    transition: background-color 0.3s ease;
+    /* Transição para fundo */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fundo suave ao passar o mouse */
+}
+
+.menu-toggle {
+    display: block;
+    /* Mostra o botão do menu em telas menores */
+    background: none;
+    /* Sem fundo */
+    color: #fff;
+    /* Cor do texto */
+    font-size: 2rem;
+    /* Tamanho da fonte maior */
+    cursor: pointer;
+    /* Cursor pointer */
+}
+
+
+
+.nav-links.active {
+    display: flex;
+    /* Exibe os links quando o menu é ativado */
+}
+
+.menu-toggle {
+    display: block;
+    /* Mostra o botão do menu em telas menores */
+}
+
+
+
+.menu-toggle {
+    display: none;
+    /* Oculto por padrão em telas grandes */
+    background: none;
+    /* Sem fundo */
+    color: #fff;
+    /* Cor do texto */
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    border: none;
+    /* Sem borda */
+    cursor: pointer;
+    /* Muda o cursor para ponteiro */
+    position: relative;
+    /* Para permitir efeitos de transição */
+    transition: transform 0.3s ease;
+    /* Transição suave ao interagir */
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+    /* Aumenta ligeiramente o botão ao passar o mouse */
+}
+
+.menu-toggle:focus {
+    outline: none;
+    /* Remove o contorno padrão */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+    /* Sombra ao focar para acessibilidade */
+}
+
+.menu-toggle:after {
+    content: "";
+    /* Adiciona um pseudo-elemento para um efeito estético */
+    position: absolute;
+    /* Posicionamento absoluto para alinhamento */
+    width: 100%;
+    /* Ocupa toda a largura do botão */
+    height: 100%;
+    /* Ocupa toda a altura do botão */
+    background: rgba(255, 255, 255, 0.1);
+    /* Fundo levemente transparente */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.3s ease;
+    /* Transição suave para a opacidade */
+}
+
+.menu-toggle:hover:after {
+    opacity: 1;
+    /* Torna visível ao passar o mouse */
+}
+
+.section {
+    padding: 4rem 1rem;
+    /* Espaçamento superior/inferior e lateral */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.home {
+    background: #000;
+    /* Cor de fundo preta */
+    color: #fff;
+    /* Cor do texto branca */
+    height: 60vh;
+    /* Altura da seção */
+    display: flex;
+    /* Flexbox para centralização */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Sombra para profundidade */
+    position: relative;
+    /* Para posicionamento de elementos filhos */
+}
+
+.btn {
+    background: #1D8FF2;
+    /* Cor de fundo azul */
+    color: #fff;
+    /* Cor do texto branca */
+    padding: 0.75rem 1.5rem;
+    /* Espaçamento interno */
+    border: none;
+    /* Remove borda padrão */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Muda o cursor ao passar o mouse */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Transições suaves */
+}
+
+.btn:hover {
+    background: #4B61A6;
+    /* Cor ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve aumento no tamanho do botão */
+}
+
+.team-member {
+    display: inline-block;
+    /* Exibe os membros da equipe em linha */
+    text-align: center;
+    /* Centraliza o texto */
+    margin: 1rem;
+    /* Margem ao redor de cada membro */
+    border: 1px solid #ccc;
+    /* Borda sutil ao redor do membro */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    padding: 1rem;
+    /* Espaçamento interno */
+    background: #fff;
+    /* Fundo branco para os membros da equipe */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra para profundidade */
+    transition: transform 0.2s ease;
+    /* Transição suave ao passar o mouse */
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    /* Levanta o membro da equipe ao passar o mouse */
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d36500;
+    /* Cor de fundo verde do WhatsApp */
+    color: white;
+    /* Cor do texto */
+    padding: 15px;
+    /* Padding para aumentar o botão */
+    border-radius: 50%;
+    /* Faz o botão ser redondo */
+    font-size: 24px;
+    /* Tamanho da fonte do ícone */
+    text-decoration: none;
+    /* Remove sublinhado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza o conteúdo no botão */
+    width: 60px;
+    /* Largura do botão */
+    height: 60px;
+    /* Altura do botão */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para profundidade */
+    transition: background-color 0.3s ease;
+    /* Transição suave de cor */
+    animation: pulse 1.5s infinite;
+    /* Aplica a animação de piscar */
+}
+
+.whatsapp-button:hover {
+    background-color: #20b558;
+    /* Cor ao passar o mouse */
+}
+
+.whatsapp-button img {
+    width: 50px;
+    /* Largura do ícone do WhatsApp */
+    height: 50px;
+    /* Altura do ícone do WhatsApp */
+}
+
+/*Escritorio*/
+
+.about {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: #F2F2F2;
+    border-radius: 12px;
+    /* Aumentando a borda para um visual mais suave */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    /* Sombra mais suave */
+    margin: 1rem;
+    /* Adicionando margem para separar de outros elementos */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    /* Centralizando e melhorando o espaçamento */
+    border-radius: 12px;
+    /* Arredondando os cantos da galeria */
+    overflow: hidden;
+    /* Para esconder as bordas arredondadas */
+}
+
+.office-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    /* Alinhando as bordas com a galeria */
+    display: none;
+    /* Esconde todas as imagens inicialmente */
+}
+
+.office-image.active {
+    display: block;
+    /* Mostra apenas a imagem ativa */
+}
+
+.gallery-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os botões */
+    gap: 0.5rem;
+    /* Usando gap para espaçamento uniforme entre botões */
+}
+
+.gallery-buttons button {
+    background: #1D8FF2;
+    /* Cor do botão */
+    color: white;
+    /* Cor do texto */
+    padding: 0.6rem 1.2rem;
+    /* Ajustando padding para mais conforto */
+    border: none;
+    border-radius: 6px;
+    /* Aumentando o arredondamento dos botões */
+    cursor: pointer;
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.2s;
+    /* Efeito de transição adicional */
+}
+
+.gallery-buttons button:hover {
+    background: #0e5da0;
+    /* Cor ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve aumento ao passar o mouse */
+}
+
+.about-text {
+    max-width: 800px;
+    /* Largura máxima do texto */
+    margin: 2rem auto;
+    /* Espaçamento superior e inferior */
+    line-height: 1.6;
+    /* Melhora a legibilidade */
+    font-size: 1.1rem;
+    /* Tamanho da fonte */
+    color: #4B4B4B;
+    /* Cor do texto */
+    padding: 1rem;
+    /* Espaçamento lateral aumentado */
+    background: #ffffff;
+    /* Fundo branco para destacar a descrição */
+    border-radius: 8px;
+    /* Arredondando os cantos da descrição */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra leve para o destaque */
+    position: relative;
+    /* Para permitir o uso de um pseudo-elemento */
+}
+
+.about-text::before {
+    content: "";
+    /* Pseudo-elemento para efeito visual */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    /* Arredondando os cantos do pseudo-elemento */
+    background: rgba(29, 143, 242, 0.1);
+    /* Fundo suave em azul */
+    z-index: -1;
+    /* Colocando atrás do texto */
+}
+
+.about-text p {
+    margin: 0.5rem 0;
+    /* Adicionando espaço entre os parágrafos */
+}
+
+/* Estilos adicionais para responsividade */
+@media (max-width: 600px) {
+    .about-text {
+        font-size: 1rem;
+        /* Tamanho da fonte reduzido em telas menores */
+    }
+
+    .gallery-buttons button {
+        padding: 0.4rem 0.8rem;
+        /* Tamanho dos botões reduzido em telas menores */
+        font-size: 0.9rem;
+        /* Ajuste no tamanho da fonte dos botões */
+    }
+
+    .about {
+        padding: 2rem 0.5rem;
+        /* Reduzindo o padding em telas pequenas */
+    }
+}
+
+
+/*Advogados*/
+.lawyers {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: #F2F2F2;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lawyer-profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.lawyer-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    /* Largura máxima para manter harmonia */
+}
+
+.lawyer-image {
+    width: 100%;
+    max-width: 250px;
+    /* Largura máxima da imagem */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.lawyer-image:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
+}
+
+.lawyer-description {
+    max-width: 100%;
+    /* Largura total permitida */
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1rem;
+    /* Tamanho da fonte ajustado para responsividade */
+    color: #4B4B4B;
+}
+
+/*História*/
+.history {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #F2F2F2;
+    /* Fundo leve para contraste */
+    border-radius: 12px;
+    /* Borda arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    margin: 2rem 0;
+    /* Margem superior e inferior */
+    position: relative;
+    /* Para posicionar o pseudo-elemento */
+    overflow: hidden;
+    /* Para esconder a imagem de fundo */
+}
+
+.history::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(54, 54, 54, 0.1);
+    /* Camada de cor suave */
+    border-radius: 12px;
+    /* Manter a borda arredondada */
+    z-index: 1;
+    /* Fica abaixo do conteúdo */
+}
+
+.history h2 {
+    font-size: 2rem;
+    /* Tamanho da fonte do título */
+    color: #000000;
+    /* Cor do título */
+    margin-bottom: 1rem;
+    /* Espaço abaixo do título */
+    z-index: 2;
+    /* Fica acima da camada de fundo */
+    position: relative;
+    /* Para que o z-index funcione */
+    font-family: 'Arial', sans-serif;
+    /* Fonte mais elegante */
+    line-height: 1.2;
+    /* Melhor espaçamento para o título */
+}
+
+.history-description {
+    max-width: 800px;
+    /* Largura máxima do texto */
+    margin: 0 auto;
+    /* Centralizando */
+    line-height: 1.6;
+    /* Melhora a legibilidade */
+    font-size: 1.1rem;
+    /* Tamanho da fonte */
+    color: #4B4B4B;
+    /* Cor do texto */
+    padding: 0 1rem;
+    /* Espaçamento lateral */
+    margin-bottom: 1rem;
+    /* Espaço entre parágrafos */
+    z-index: 2;
+    /* Fica acima da camada de fundo */
+    position: relative;
+    /* Para que o z-index funcione */
+}
+
+/* Estilo para destacar parágrafos */
+.history-description p {
+    margin: 1rem 0;
+    /* Espaçamento entre os parágrafos */
+    background: rgba(255, 255, 255, 0.8);
+    /* Fundo branco suave */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Borda arredondada */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+}
+
+/* Estilos adicionais para responsividade */
+@media (max-width: 600px) {
+    .history {
+        padding: 2rem 0.5rem;
+        /* Reduzindo o padding em telas pequenas */
+    }
+
+    .history h2 {
+        font-size: 1.5rem;
+        /* Tamanho reduzido em telas pequenas */
+    }
+
+    .history-description {
+        font-size: 1rem;
+        /* Tamanho da fonte reduzido em telas menores */
+        padding: 0 0.5rem;
+        /* Reduzindo o padding lateral */
+    }
+
+    .history-description p {
+        padding: 0.8rem;
+        /* Reduzindo o padding interno nos parágrafos */
+    }
+}
+
+
+footer {
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Estilos para as postagens */
+/* Contêiner dos posts */
+#blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo das postagens individuais */
+/* Estilo para a seção do blog */
+.section.blog {
+    padding: 20px;
+    /* Espaçamento interno da seção */
+    background-color: #f9f9f9;
+    /* Cor de fundo clara para a seção do blog */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    margin-top: 20px;
+    /* Espaçamento acima da seção */
+}
+
+/* Estilo para o iframe */
+#blog-iframe {
+    width: 100%;
+    /* Largura total */
+    height: 600px;
+    /* Altura do iframe, ajuste conforme necessário */
+    border: none;
+    /* Remove bordas do iframe */
+}
